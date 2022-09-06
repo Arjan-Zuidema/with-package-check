@@ -5,6 +5,7 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "npm run build-cjs && npm run build-esm",
     "build-cjs": "swc ./src/index.js -o ./dist/cjs/index.js --config-file .swc-cjs",
     "build-esm": "swc ./src/index.js -o ./dist/esm/index.js --config-file .swc-esm",
