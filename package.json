@@ -1,0 +1,31 @@
+{
+  "name": "next-package-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "scripts": {
+    "build": "npm run build-cjs && npm run build-esm",
+    "build-cjs": "swc ./src/index.js -o ./dist/cjs/index.js --config-file .swc-cjs",
+    "build-esm": "swc ./src/index.js -o ./dist/esm/index.js --config-file .swc-esm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Arjan Zuidema",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arjan-Zuidema/with-package-check"
+  },
+  "homepage": "https://github.com/Arjan-Zuidema/with-package-check",
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.248"
+  },
+  "dependencies": {
+    "inquirer": "^9.1.1",
+    "node-strings": "^1.0.2"
+  }
+}
