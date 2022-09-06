@@ -7,7 +7,7 @@ NextJS plugin to check for outdated packages while starting up. Faster than `npm
 File: `next.config.js`
 
 ```js
-  const { withPackageCheck } = require('with-package-check')
+  const { withPackageCheck } = require('next-package-check')
 
   const nextConfig = withPackageCheck({
     "your next config": "here",
